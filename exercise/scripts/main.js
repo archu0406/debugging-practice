@@ -32,13 +32,17 @@ window.addEventListener('DOMContentLoaded', function() {
           matchedCards.push(card1, card2);
           card1.classList.add('is-matched');
           card2.classList.add('is-matched');
-          console.log('selected cards are matched')
+          console.log('selected cards are matched');
         }
 
         // Regardless of whether or not the cards match, deselect them and reset
         // the collection of matched cards.
-        card1.classList.remove('is-selected');
-        card3.classList.remove('is-selected');
+        else{
+          card1.classList.remove('is-selected');
+          card3.classList.remove('is-selected');
+          console.log('Selected cards are not matched');
+        }
+      
         selectedCards = [];
       }
 
