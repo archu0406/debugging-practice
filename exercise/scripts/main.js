@@ -6,11 +6,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
   cards.forEach(function(card) {
     card.addEventListener('click', function() {
+      selectedCards.push(card);
       // If the card has already been matched, ignore it.
       if (card.classList.contains('is-matched')) {
         return;
       }
-
+      console.log('only one card is selected');
       // If we haven't selected 2 cards yet, add the current card to the
       // collection of selected cards and apply the correct CSS class.
       if (selectedCards.length < 2) {
@@ -20,8 +21,11 @@ window.addEventListener('DOMContentLoaded', function() {
       // If we have selected two cards, see if they match.
       if (selectedCards.length === 2) {
         var card1 = selectedCards[0];
-        var card2 = selectedCards[0];
+        var card2 = selectedCards[1];
 
+        card1.classList.add('is-selected');
+        card2.classList.add('is-selected');
+        console.log('two cards has been selected');
         // If the cards match, add them to the collection of matched cards and
         // apply the correct CSS class.
         if (card1.innerText === card2.innerText) {
