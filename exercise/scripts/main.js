@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function() {
         // the collection of matched cards.
         else{
           card1.classList.remove('is-selected');
-          card3.classList.remove('is-selected');
+          card2.classList.remove('is-selected');
           console.log('Selected cards are not matched');
         }
       
